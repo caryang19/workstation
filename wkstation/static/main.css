@@ -3,10 +3,10 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
-{% load static %}
+
 @font-face {
   font-family: OpenSans-Regular;
-  src: url("{% static '../fonts/OpenSans/OpenSans-Regular.ttf' %}"); 
+  
 }
 
 
