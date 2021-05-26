@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ecobank - Workstation List</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<div class="form-group">
+					</div>
+					<table>
+						<a href="{% url 'export-csv' %}" class="btn btn-primary">Export</a>
+						
+						<div class="submitting"></div>
+						
+						<thead>
+							<tr class="table100-head">
+								
+
+								
+								<th class="column1">System User</th>
+								<th class="column2">System Type</th>
+								<th class="column3">Hostname</th>
+								<th class="column4">Mac Address</th>
+								<th class="column5">IP Address</th>
+								<th class="column6">System Brand</th>
+								
+								
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									
+									
+										<td class="column1"></td>
+										<td class="column2"></td>
+										<td class="column4"></td>
+										<td class="column5"></td>
+										<td class="column6"></td>
+									</tr>
+									
+								
+								
+								
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

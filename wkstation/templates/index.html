@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Ecobank - WorkStation Directory</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{% load static %}
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Workstation Database</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-10">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-6">
+								<div class="contact-wrap w-100 p-lg-5 p-4">
+									<h3 class="mb-4">System Details</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+									
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form method="POST" id="workstation" name="workstation" class="contactForm">
+										{% csrf_token %}
+										<div class="row">
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="text" class="form-control" name="system_user" id="system_user" value={{system_user}}>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">																		
+													<input type="text" class="form-control" name="hostname" id="hostname" value={{hostname}}>
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="text" class="form-control" name="mac" id="mac" value={{mac}}>
+												</div>
+												
+												</div>
+												<div class="col-md-12"> 
+													<div class="form-group">
+														<input type="text" class="form-control" name="ip_address" id="ip_address" value={{ip_address}}>
+													</div>
+													</div>
+													<div class="col-md-12"> 
+														<div class="form-group">
+															<h6 style="color: cornsilk;">System Brand:</h6>
+															<select style="width: 120px;" name="system_brand">
+																<option value="Select-Brand">Select Brand</option>
+																<option value="DELL">Dell</option>
+																<option value="HP">HP</option>
+																<option value="LENOVO">Lenovo</option>
+																<option value="TOSHIBA">Toshiba</option>
+																<option value="COMPAQ">Compaq</option>
+																<option value="IBM">IBM</option>
+																<option value="OTHERS">Others</option>
+																
+															</select>
+														</div>
+														</div>
+														<div class="col-md-12"> 
+															<div class="form-group">
+																<h6 style="color: cornsilk;">System Type:</h6>
+																<select style="width: 120px;" name="system_type">
+																	<option value="Select-Type">Select Type</option>
+																	<option value="Laptop">Laptop</option>
+																	<option value="Desktop">Desktop</option>
+																</select>
+															</br>
+																				
+															
+															</div>
+															</div>
+															<div class="col-md-12"> 
+																<div class="form-group">
+																	<input type="text" class="form-control" name="system_model" id="system_model" placeholder="Model">
+																</div>
+															</div>
+															
+											
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="location" id="location" placeholder="Location">
+												</div>
+											</div>
+											
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="checkbox" name="laptop" id="laptop" value={{select_type1}}>
+													<label for="select_type2" style="color:cornsilk;" important>I certify that all my system details are accurate.</label><br/>
+													<input type="submit" value="Update" class="btn btn-primary">
+													<input type="reset" value="Clear" class="btn btn-secondary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-6 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-lg-5 p-4 img">
+									<h3>Contact IT Service Desk</h3>
+									<p class="mb-4">Experiencing any issue on this page? Engage us on Teams or Mail</p>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Address:</span> Plot 21, Ahmadu Bello Way, Victoria Island, Lagos, NG.</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Phone:</span> <a href="#">012260397</a></p>
+								<p><span>VOIP:</span> <a href="#">8725555</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Email:</span> <a href="mailto:alleng-itservicedesk@ecobank.com">alleng-itservicedesk@ecobank.com</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-globe"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Website</span> <a href="https://www.ecobank.com">www.ecobank.com</a></p>
+					          </div>
+							  
+				          </div>
+						  <div class="dbox w-100 d-flex align-items-center">
+							<div class="text pl-3">
+							<p><span>Instructions:</span></br>Fill only the following details:</br> 
+								- System Brand</br> 
+								- System Type</br> 
+								- Model e.g ProBook 6460b</br> 
+								- Location e.g Head Office, VI, Lagos </br> 
+								- Check "I agree..."
+							
+							
+							</p>
+						  </div>
+						  
+					  </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+	</body>
+</html>
+
