@@ -28,7 +28,7 @@ SECRET_KEY = '5!(0-l=(ue+d6^b&7xx-p0g^tv&dor(z-!34b&o5)k%64*!j5r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 STATIC_FILES = [
     os.path.join(BASE_DIR, 'static')
@@ -82,7 +82,10 @@ WSGI_APPLICATION = 'workstation.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
     }
 
 
@@ -124,4 +127,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
